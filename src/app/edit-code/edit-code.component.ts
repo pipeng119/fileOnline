@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import 'codemirror/mode/javascript/javascript.js'
+import * as CodeMirror from 'codemirror';
+
+import 'codemirror/mode/javascript/javascript.js';
+// import 'codemirror/theme/monokai.css'; 为什么不生效呢？
 
 @Component({
   selector: 'app-edit-code',
@@ -9,12 +12,15 @@ import 'codemirror/mode/javascript/javascript.js'
 export class EditCodeComponent implements OnInit {
   code: any = '';
   cmOptions: any = '';
-  constructor() { 
+  constructor() {
     this.cmOptions = {
-      mode: {name: "text/javascript"},
-      theme:'monokai',
-      lineNumbers: true,
-      styleActiveLine: true
+      theme: 'monokai',
+      styleActiveLine: true,
+      mode: 'javascript',
+      // lineNumbers: true,
+      tabSize: 10,
+      // readOnly:"nocursor",
+      smartIndent: true,
     }
   }
 

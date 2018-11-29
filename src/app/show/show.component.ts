@@ -1,10 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Example } from '../model/Example';
-import * as CodeMirror from 'codemirror';
-// import "codemirror/mode/javascript";
-import 'codemirror/mode/sql/sql';
-import 'codemirror/addon/hint/show-hint.js';
-import 'codemirror/addon/hint/sql-hint.js';
 @Component({
   selector: 'app-show',
   templateUrl: './show.component.html',

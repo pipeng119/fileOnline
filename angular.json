@@ -29,7 +29,8 @@
             "styles": [
               "src/styles.scss",
               "node_modules/element-angular/theme/index.css",
-              "node_modules/codemirror/lib/codemirror.css"
+              "node_modules/codemirror/lib/codemirror.css",
+              "node_modules/codemirror/theme/monokai.css"
             ],
             "scripts": []
           },
