@@ -17,7 +17,7 @@ export class EditCodeComponent implements OnInit {
       theme: 'monokai',
       styleActiveLine: true,
       mode: 'javascript',
-      // lineNumbers: true,
+      lineNumbers: true,
       tabSize: 10,
       // readOnly:"nocursor",
       smartIndent: true,

@@ -10,11 +10,13 @@
     <!-- <codemirror [(ngModel)]="code" [config]="cmOptions">
     </codemirror> -->
     <div>
-        <el-button [plain]="true" type="success" (click)="editFlag = 1">JavaScript</el-button>
-        <el-button [plain]="true" type="warning"  (click)="editFlag = 2">Html & Css</el-button>
+      <el-button [plain]="true" type="success" (click)="editFlag = 1">JavaScript</el-button>
+      <el-button [plain]="true" type="warning" (click)="editFlag = 2">Html & Css</el-button>
     </div>
     <app-edit-code #codeHtmlCss *ngIf="editFlag === 1"></app-edit-code>
     <app-edit-code #codeJs *ngIf="editFlag === 2"></app-edit-code>
+    <!-- <codemirror [(ngModel)]="jsCode" [config]="cmOptions" [ngStyle]="{display: editFlag == 1? 'block' : 'none'}"></codemirror>
+    <codemirror [(ngModel)]="htmlCode" [config]="cmOptions" [ngStyle]="{display: editFlag == 1? 'block' : 'none'}"></codemirror> -->
   </div>
   <div class="scroll-01"></div>
   <div class="effect">

@@ -7,9 +7,11 @@ import { Example } from '../model/Example';
 })
 export class ShowComponent implements OnInit {
 
-  // private code: any = '';
+  jsCode: any = "";
 
-  // private cmOptions: any = '';
+  htmlCode: any = ""
+
+  cmOptions: any = '';
 
   editFlag: number;
   exampleList: Array<Example> = [
@@ -33,16 +35,26 @@ export class ShowComponent implements OnInit {
 
   constructor() { 
     this.editFlag = 1;
+    this.cmOptions = {
+      theme: 'monokai',
+      styleActiveLine: true,
+      mode: 'javascript',
+      lineNumbers: true,
+      tabSize: 10,
+      // readOnly:"nocursor",
+      smartIndent: true,
+    }
   }
 
   ngOnInit() {
   }
 
   run(){
+    console.log(this.jsCode,this.htmlCode)
     // console.log(1);
     // console.log(this.frameElement.nativeElement.contentWindow.document);
     let frameWindow = this.frameElement.nativeElement.contentWindow;
     let fromDocument = frameWindow.document;
-    fromDocument.getElementById('div').innerHTML = "我依然是辣么帅";
+    fromDocument.writeln(`<script>${this.jsCode}</script>`)
   }
 }
